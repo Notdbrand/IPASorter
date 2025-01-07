@@ -131,7 +131,7 @@ namespace IPASorter
                     }
 
                     // rename file
-                    string newFileName = $"{i.CFBundleDisplayName}-({i.CFBundleIdentifier})-{i.CFBundleVersion}-(iOS_{i.MinimumOSVersion})-{i.md5sum}.ipa";
+                    string newFileName = $"({i.CFBundleDisplayName})-({i.CFBundleIdentifier})-({i.CFBundleVersion})-(iOS_{i.MinimumOSVersion})-({i.md5sum}).ipa";
                     File.Move(i.path, i.path.Replace(i.fileName, newFileName), true);
                     i.path = i.path.Replace(i.fileName, newFileName);
                     i.fileName = newFileName;
